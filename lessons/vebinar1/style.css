@@ -1,0 +1,26 @@
+@import "main.css";
+body{
+    background-color: black;
+}
+p{color: blue;text-align: center;font-size: 24px;}
+span{color: darkmagenta}
+.aaa{
+    color: yellow;
+}
+.bbb{
+    background-color: green;
+}
+#ttt{
+    color: aqua;
+}
+
+a{
+    color: cornflowerblue !important;
+}
+/*cdklfdkfd
+d'fdfdf
+dfdfdf
+dfdfd*/
+.vvv .yyy a{
+    color: greenyellow;
+}
