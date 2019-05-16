@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><h1 align="center">Заполните анкету</h1>
+    <fieldset>
+        <legend>Личные данные</legend>
+        <form id="anketa1" name="anketa" method="post" action="http://sc.it-academy.by/fe/form.php">
+            <input type="text" name="surname" maxlength="25" pattern="[А-Яа-яЁё]" placeholder="Фамилия" autofocus required><br>
+            <input type="text" name="firstname" maxlength="20" pattern="[А-Яа-яЁё]" placeholder="Имя" required><br>
+            <input type="text" name="firstname" maxlength="24" pattern="[А-Яа-яЁё]" placeholder="Отчество" required>
+        </form>
+        <fieldset>
+            <legend>Паспортные данные</legend>
+            <form id="anketa2" name="passport" method="post" action="http://sc.it-academy.by/fe/form.php">
+                <label>Серия </label><input type="text" name="passport" maxlength="2" pattern="[A-Z]{2.}" placeholder="AA" size="2" required>
+                <label>Номер </label><input type="text" name="namber" maxlength="7" pattern="[0-9]{7.}" placeholder="1234567" size="7" required>
+             </form>
+        </fieldset>
+        <fieldset>
+            <legend>Дата рождения</legend>
+            <form id="anketa3" name="t" method="get" action="http://sc.it-academy.by/fe/form.php">
+                <label>Год </label><input type="text" name="year" maxlength="4" pattern="[0-9]{4.}" placeholder="2000" size="4"><br>
+                <label>Месяц </label><input type="month" name="month"><br>
+                <label>День </label><input type="number" min="1" max="31" step="1" name="day" placeholder="День">
+             </form>
+        </fieldset>
+        <select name="nationality" id="nationality" required>
+            <option value="1">РБ</option>
+            <option value="2">РП</option>
+            <option value="3">ФРГ</option>
+            <option value="4">США</option>
+            <option value="5">РФ</option>
+            <option value="6">КНР</option>
+        </select>
+        <br>Адрес<br>
+        <textarea name="text" lang="ru">Адрес регистрации</textarea>
+    </fieldset>
+    <fieldset>
+        <legend>Интересы</legend>
+        <fieldset>
+            <legend>Хобби</legend>
+            <form id="hobby" name="hobby" method="get" action="http://sc.it-academy.by/fe/form.php">
+                <input type="checkbox" id="1" name="1[]"><label>Рыбалка</label><br>
+                <input type="checkbox" id="2" name="1[]"><label>Астрономия</label><br>
+                <input type="checkbox" id="3" name="1[]"><label>Дайвинг</label><br>
+                <input type="checkbox" id="4" name="1[]"><label>Марки</label>
+            </form>
+        </fieldset>
+        <fieldset>
+            <legend>Домашние животные</legend>
+            <form id="an" name="hobby" method="get" action="http://sc.it-academy.by/fe/form.php">
+                <select name="animal[]" id="animal" size="12" multiple>
+                    <optgroup label="Попугаи">
+                        <option value="1">Волнистый</option>
+                        <option value="2">Ара</option>
+                        <option value="3">Неразлучник</option>
+                    </optgroup>
+                    <optgroup label="Рыба">
+                        <option value="4">Караси</option>
+                        <option value="5">Окуни</option>
+                        <option value="6">Осетр</option>
+                    </optgroup>
+                    <optgroup label="Птицы">
+                        <option value="7">Стая ворон</option>
+                        <option value="8">Аист</option>
+                        <option value="9">Археоптерикс</option>
+                    </optgroup>
+                </select>
+            </form>
+        </fieldset>
+    </fieldset>
+    <fieldset>
+        <legend>Данные для входа и восстановления пароля</legend>
+        <form id="password" name="password" method="post" action="http://sc.it-academy.by/fe/form.php">
+            <input type="text" name="login" maxlength="20" pattern="[A-Za-z]{5.}" placeholder="Логин" required><br>
+            <input type="password" name="passw" maxlength="20" pattern="[A-Za-z]{10.}" placeholder="Пароль" required autocomplete="off">
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Координаты</legend>
+        <form id="email" name="11" method="get" action="http://sc.it-academy.by/fe/form.php">
+            <input type="email" name="email" placeholder="введите адрес почты"><br>
+            <input type="url" name="url" placeholder="введите адрес сайта">
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Цифры</legend>
+        <form id="num" name="num" method="get" action="http://sc.it-academy.by/fe/form.php">
+            <input type="number" name="number" min="-2.5"max="2.5" step="0.1"><br>
+            <input type="range" name="range"min="1"max="10" >
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Кнопки управления</legend>
+        <form id="button" name="button" method="post" action="http://sc.it-academy.by/fe/form.php">
+            <input type="submit" value="Отправить">
+            <input type="reset" value="Сбросить"><br>
+        </form>
+        <input type="image" src="email.jpg"><br>
+    </fieldset>
+</body>
+</html>
