@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <em>
+            <p>Рекомендации к выполнению работы:</p>
+            <ul>
+                <li>Все эти формы размещены в таблице, шириной 700px, 4 строки х 2 столбца</li>
+                <li>Каждая форма должна правильно заполненные атрибуты name, method и action.</li>
+                <li>Для атрибута action, воспользуйтесь значением "http://sc.it-academy.by/fe/form.php" -
+                    небольшой скрипт показывающий переменные переданные методами post и get.</li>
+            </ul>
+        </em>
+        <table width="700px" border="0">
+            <tr>
+                <th align="left"><h4>Простая форма поиска с вариантами:</h4></th>
+                <th align="left"><h4>Простая форма поиска с вариантами:</h4></th>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><fieldset>
+                    <legend>Строка поиска</legend>
+                    <form id="my_form" name="search" method="get" action="http://sc.it-academy.by/fe/form.php">
+                        <INPUT NAME=“my_form1" id="my_form1" maxlength="10">
+                        <LABEL for="my_form1"><input type="submit" value="Искать"></LABEL><br>
+                        <label><input type="checkbox" name="val1" id="check1">на сайте</label>
+                        <label><input type="checkbox" name="val2" id="check2">в google</label>
+                        <br><em>Длина запроса не более 10 символов</em>
+
+                    </form>
+                </fieldset>
+                </td>
+                <td><fieldset>
+                    <legend>Строка поиска</legend>
+                    <form id="my_form2" name="search1" method="get" action="http://sc.it-academy.by/fe/form.php">
+                        <INPUT NAME=“my_form1[]" id="my_form22" autofocus>*
+                        <LABEL for="my_form1"><input type="submit" value="Искать"></LABEL><br>
+                        <label><input type="checkbox" name="val3" id="check12">на сайте</label>
+                        <label><input type="checkbox" name="val4" id="check22">в google</label>
+                        <br><em>* - обязательное поле<br>
+                            Автофокус в поле поиска</em>
+
+                    </form>
+                </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <th align="left"><h4>Простая форма авторизации:</h4></th>
+                <th align="left"><h4>Опрос(голосование):</h4></th>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td><fieldset>
+                    <legend>Авторизируйтесь</legend>
+                    <form id="my_form3" name="pass" method="get" action="http://sc.it-academy.by/fe/form.php">
+                        <INPUT type="text" NAME=“my_form1" id="my_form33" >* Логин<br>
+                        <INPUT TYPE="password" NAME=“my_form1" id="my_form34" >* Пароль<br>
+                        <label><input type="checkbox" name="val5" id="check3">Оставаться в системе</label><br>
+                        <LABEL for="my_form1"><input type="submit" value="Войти"></LABEL><br>
+                        <em>* - обязательное поле</em>
+                    </form>
+                </fieldset>
+                </td>
+                <td><fieldset>
+                    <legend>Как вам?</legend>
+                    <form id="my_form4" name="rad" method="get" action="http://sc.it-academy.by/fe/form.php">
+                        <label><input type="radio" name="date_voite" value="1" id="radio1" checked>ничего</label><br>
+                        <label><input type="radio" name="date_voite" value="2" id="radio2">неплохо</label><br>
+                        <label><input type="radio" name="date_voite" value="3" id="radio3">хорошо</label><br>
+                        <label><input type="radio" name="date_voite" value="4" id="radio4">супер</label><br>
+                        <label><input type="hidden" name="date_voite" value="2013.12.31" id="hidden"></label><br>
+                        <LABEL for="my_form1"><input type="submit" value="Отправить"></LABEL><br>
+                        <em>Есть скрытое поле<br> name=date_voite, value="2013.12.31"</em>
+                    </form>
+                </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <th align="left"><h4>Отзыв:</h4></th>
+                <th align="left"><h4>Выпадающий и мульти списки:</h4></th>
+            </tr>
+            <tr valign="top">
+                <td><fieldset>
+                    <legend>Оставьте Ваш отзыв</legend>
+                    <form id="my_form5" name="pass" method="post" action="http://sc.it-academy.by/fe/form.php">
+                        <INPUT type="text" NAME=“name" id="name2" >* Имя<br>
+                        <INPUT TYPE="email" NAME=“email" placeholder="Введите e-mail адрес" required>* e-mail<br>
+                        <textarea name="text_ar" lg="ru">Форма отправки</textarea><br>
+                        <input type="submit" value="Отправить"><br>
+                        <em>* - обязательное поле<br>поле email - с проверкой<br>метод POST</em>
+                    </form>
+                </fieldset>
+                </td>
+                <td><fieldset>
+                    <legend>Города РБ</legend>
+                    <table>
+                        <tr valign="bottom">
+                            <td>
+                                <form id="my_form6" name="citylist1" method="get" action="http://sc.it-academy.by/fe/form.php">
+                                    <select name="city_list1" id="list1">
+                                        <optgroup label="Города РБ">
+                                            <option value="1">Брест</option>
+                                            <option value="2">Минск</option>
+                                            <option value="3">Витебск</option>
+                                        </optgroup>
+                                        <optgroup label="Города РФ">
+                                            <option value="4">Москва</option>
+                                            <option value="5">Рязань</option>
+                                            <option value="6">Магадан</option>
+                                        </optgroup>
+                                    </select>
+                                </form>
+                            </td>
+                            <td>
+                                <form id="my_form7" name="citylist2" method="get" action="http://sc.it-academy.by/fe/form.php">
+                                    <select name="city_list1[]" multiple id="list2" size="8">
+                                        <optgroup label="Города РБ">
+                                            <option value="1">Брест</option>
+                                            <option value="2">Минск</option>
+                                            <option value="3">Витебск</option>
+                                        </optgroup>
+                                        <optgroup label="Города РФ">
+                                            <option value="4">Москва</option>
+                                            <option value="5">Рязань</option>
+                                            <option value="6">Магадан</option>
+                                        </optgroup>
+                                    </select></form>
+                            </td>
+                            <td>
+                                <input type="submit" value="Ok">
+                            </td>
+                        </tr>
+                    </table>
+                    </form>
+                </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <th align="left"><h4>Загрузка файла на сервер:</h4></th>
+                <th align="left"><h4>Валидация данных HTML5:</h4></th>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Upload</legend>
+                            <form enctype="multipart/form-data" id="my_form8" name="uploud" method="post" action="http://sc.it-academy.by/fe/form.php">
+                            Файл:<br>
+                             <input type="file" name="file111" dir="ltr">
+                             <br>Срок хранения (года):<br>
+                             <input type="text" name="date" size="3" maxlength="3"><input type="submit" value="загрузить">
+                            </form>
+                    </fieldset>
+                </td>
+                <td>
+                   <fieldset><legend>Строка поиска</legend>
+                       <form id="my_form9" name="validation" method="get" action="http://sc.it-academy.by/fe/form.php">
+
+                               <input type="text" name="text" pattern="^[А-Яа-яЁё\s]+$" placeholder="Только русские буквы"required>
+                           <br><em>Телефонный номер в формате<br>+ХХХ-ХХ-ХХХХХХХ, где Х - любое число</em><br>
+                            <input type="tel" pattern="+(0-9){3}-(0-9){2}-(0-9){7}" required><br>
+                           <input type="submit" name="Проверить">
+
+                       </form>
+                   </fieldset>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
